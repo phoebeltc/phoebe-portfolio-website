@@ -1,0 +1,68 @@
+@import "./abstracts/variables";
+
+@import "./base/typography";
+
+@import "./component/header";
+@import "./component/homepage";
+@import "./component/works";
+@import "./component/about";
+@import "./component/contact";
+
+body > #root {
+    height: 100vh;
+    width: 100vw;
+}
+
+body {
+    margin: 0;
+    
+    ::-webkit-scrollbar{
+        display: none;
+    }
+}
+
+.container {
+    width: calc(100vh - 5.8rem);
+    height: 100vw;
+    transform-origin: top left;
+    transform: rotate(-90deg) translateX(-100vh);
+    overflow-y: scroll;
+    position: relative;
+    @media screen and (max-width: $layout-breakpoints-small) {
+        width: 100vw;
+        height: 100vh;
+        transform: none;
+        overflow-x: scroll;
+        background-color: #f7f7f7;
+    }
+}
+
+.horizontal-scroll-wrapper {
+    width: 400vw;
+    transform-origin: top left;
+    transform: rotate(90deg) translateY(calc(-100vh + 5.8rem));
+    display: flex;
+    background : #f7f7f7;
+    height: calc(100vh - 5.8rem);
+    position: absolute;
+    @media screen and (max-width: $layout-breakpoints-small) {
+        transform: none;
+        flex-direction: column;
+    }
+}
+
+.frame { 
+    width: 100vw;
+    height: 100vh;
+}
+
+//cursor 
+.cursor {
+    position: fixed; 
+    left: 0;
+    top: 0; 
+    width: 32px; 
+    height: 32px; 
+    border-radius: 16px;
+    background-color: $black; 
+}

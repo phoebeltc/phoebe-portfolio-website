@@ -1,0 +1,127 @@
+@mixin sticker {
+    position: absolute;
+    width: 8vw;
+    height: auto; 
+    cursor: grab;
+    @media screen and (max-width: $layout-breakpoints-small) {
+        width: 15vh;
+    }
+}
+
+.frame-homepage { 
+    width: 100vw;
+    height: calc(100vh - 5.8rem);
+    box-sizing: border-box;
+    padding: 1.5em 4.25em;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    border-right: 1px solid $black;
+    @media screen and (max-width: $layout-breakpoints-small) {
+        padding: 2.125em;
+        border-right: 0;
+        height: 100vh;
+    }
+    @media (max-height: 40rem) {
+        padding: 2vh 4.25em;
+    }
+}
+
+.space-homepage {
+    white-space: pre;
+    @media screen and (max-width: $layout-breakpoints-small) {
+        white-space: normal;
+    }
+}
+
+.footer-homepage {
+    display: flex;
+    justify-content: space-between;
+    position: relative;
+}
+
+.scroll {
+    background-color: $yellow;
+    height: 150px;
+    width: 150px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 50%;
+    position:absolute;
+    right: 0;
+    top: -4.8em;
+
+    @media screen and (max-width: $layout-breakpoint-xsmall) {
+        height: 100px;
+        width: 100px;
+        top: -2.8em;
+    }
+}
+
+.image-homepage {
+    position: relative;
+    height: 3.6rem;
+}
+
+//stickers 
+
+.pig-homepage {
+    @include sticker;
+    left: 15vw;
+    top: 60vh;
+    @media screen and (max-width: $layout-breakpoints-small) {
+        left:0;
+        top: 70vh;
+    }
+}
+
+.cooking-homepage {
+    @include sticker;
+    left: 13vw;
+    top: 5vh;
+    @media screen and (max-width: $layout-breakpoints-small) {
+        left: 0;
+        top: 8vh;
+    }
+}
+
+.eye-homepage {
+    @include sticker;
+    right: 0;
+    top: 30vh;
+    @media screen and (max-width: $layout-breakpoints-small) {
+        right: 5vw;
+        top: 40vh;
+    }
+}
+
+.hongkong-homepage {
+    @include sticker;
+    right: 35vw;
+    top: 10vh;
+    @media screen and (max-width: $layout-breakpoints-small) {
+        right:0;
+        top:0;
+    }
+}
+
+.passion-homepage {
+    @include sticker;
+    right: 25vw;
+    top: 30vh;
+    @media screen and (max-width: $layout-breakpoints-small) {
+        right: 18vw;
+        top: 18vh;
+    }
+}
+
+.patient-homepage {
+    @include sticker;
+    right: 13vw;
+    top: 55vh;
+    @media screen and (max-width: $layout-breakpoints-small) {
+        right:0;
+        top: 63vh;
+    }
+}

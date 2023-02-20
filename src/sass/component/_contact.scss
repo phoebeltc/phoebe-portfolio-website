@@ -1,0 +1,176 @@
+.frame-contact { 
+    width: 100vw;
+    height: calc(100vh - 5.8rem);
+    box-sizing: border-box;
+    padding: 4.25em 4.25em 1.5em 4.25em;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+
+    @media screen and (max-width: $layout-breakpoints-small) {
+        padding: 2.125em;
+        border-right: 0;
+        height: 100vh;
+    }
+    @media (max-height: 40rem) {
+        padding: 2vh 4.25em;
+    }
+}
+
+.email-contact {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    box-sizing: border-box;
+    height: 90%;
+    position: relative;
+}
+
+.email-text-contact {
+    @extend h1;
+    color: $black;    
+    outline: none;
+    text-decoration: none;
+    @media screen and (max-width: $layout-breakpoints-small) {
+        font-size: 2.5rem;
+        text-align: center;
+    }
+}
+
+//speech 
+
+.speech-contact {
+    position: absolute;
+    z-index: -2;
+}
+
+.speech-img1-contact {
+    width: 250px;
+    height: 250px;
+    position: absolute;
+    left: -450px;
+    top: -100px;
+    transform: scaleX(-1);
+}
+
+.speech-img2-contact {
+    width: 250px;
+    height: 250px;
+    position: absolute;
+    left: 150px;
+    top: -250px;
+}
+
+//pig 
+
+.pig-contact {
+    position: absolute;
+    z-index: -5;
+}
+
+.pig-img1-contact {
+    width: 130px;
+    height: 130px;
+    position: absolute;
+    left: -300px;
+    top: -200px;
+}
+
+.pig-img2-contact {
+    width: 130px;
+    height: 130px;
+    position: absolute;
+    transform: scaleX(-1);
+    left: 100px;
+    top: 50px;
+}
+
+.pig-img3-contact {
+    width: 130px;
+    height: 130px;
+    position: absolute;
+    left: 250px;
+    top: -200px;
+}
+
+//footer 
+
+.footer-contact {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    @media screen and (max-width: $layout-breakpoints-small) {
+        flex-direction: column;
+        align-items: flex-start;
+    }
+}
+
+
+.socialmedia-contact {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    @media screen and (max-width: $layout-breakpoints-small) {
+        width: 100%;
+        display: flex;
+        flex-direction: row;
+        justify-content: space-between;
+        padding-bottom: 1.5em;
+        border-bottom: 1px solid $black;
+        align-items: flex-start;
+    }
+}
+
+.smlink-contact {
+    padding-right: 3em;
+    overflow: hidden;
+    position: relative; 
+    display: inline-block;
+    color: $black;
+    @media screen and (max-width: $layout-breakpoints-small) {
+        padding: 0;
+    }
+
+    &:after {
+        content: '';
+        position: absolute; 
+        width: 100%; 
+        left:0;
+    }
+
+    &:hover::before {
+        transform-origin: 0% 50%;
+        transform: scaleX(1);
+    }
+
+    &:after {
+        content: attr(data-replace);
+        transform-origin: 100% 50%;
+        transform: translate3d(0, 100%, 0);
+        transition: transform .3s cubic-bezier(0.76, 0, 0.24, 1);
+    }
+    
+    &:hover::after {
+        transform: translate3d(0, 0, 0);
+    }
+
+    p {
+        font-size: 0.875rem;
+        font-family: $DarkGrotesque;
+        font-weight: 600;
+        outline: none;
+        text-decoration: none;
+        text-transform: uppercase;
+        transition: transform .3s cubic-bezier(0.76, 0, 0.24, 1);
+        margin: 0;
+        display: inline-block;
+        &:visited {
+        color: $black;
+        }
+    }
+
+    &:hover p {
+        transform: translate3d(0, -100%, 0);
+    }
+}
+

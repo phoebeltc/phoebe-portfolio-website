@@ -1,0 +1,212 @@
+.frame-works { 
+    width: 100vw;
+    height: calc(100vh - 5.8rem);
+    box-sizing: border-box;
+    display: flex;
+
+    @media screen and (max-width: $layout-breakpoints-small) {
+        padding: 7em 2.125em 0 2.125em;
+        border-right: 0;
+        height: auto;
+        flex-direction: column;;
+    }
+}
+
+//work 
+.wrapper-work {
+    width: 33.33vw;
+    height: 100%;
+    border-right: 1px solid $black;
+    display: flex;
+    flex-direction: column;
+    @media screen and (max-width: $layout-breakpoints-small) {
+        width: 100%;
+        border: 0;
+        height: auto;
+        margin-bottom: 3em;
+    }
+}
+
+//work-upper
+
+.work-upper {
+    width: 100%;
+    height: 87%;
+    padding: 2em 4.25em ;
+    box-sizing: border-box;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    @media screen and (max-width: $layout-breakpoints-small) {
+        padding:0;
+        height: auto;
+    }
+    @media screen and (min-width: $layout-breakpoints-small) and (max-width: 1460px) {
+        padding: 2em;
+    }
+}
+
+.work-title {
+    @media screen and (max-width: $layout-breakpoints-small) {
+        order: 1;
+        border-left: 1px solid $black;
+        border-right: 1px solid $black;
+        margin: 0;
+        padding: 0 0.5em;
+    }
+}
+
+.work-image-block {
+    position: relative;
+    @media screen and (max-width: $layout-breakpoints-small) {
+        order: 0;
+        margin-bottom: 2em;
+    }
+    @media screen and (min-width: $layout-breakpoints-small) and (max-width: 1460px) {
+        height: 60%;
+    }
+    @media (max-height: 40rem) {
+        display: none;
+    }
+}
+
+.work-highlights {
+    position: absolute;
+    font-size: 0.875rem;
+    font-family: $DarkGrotesque;
+    font-weight: 600;
+    background-color: $yellow;
+    width: 120px;
+    height: 120px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 50%;
+    text-align: center;
+    letter-spacing: .2rem;
+    right: -10px;
+    bottom: -10px;
+    z-index: 0;
+    @media screen and (max-width: $layout-breakpoints-small) {
+        display: none;
+    }
+}
+
+.work-image {
+    width: 90%; 
+    height: 40vh;
+    border-radius: 50px;
+    object-fit: cover;
+    z-index: 0;
+    @media (max-height: 40rem) {
+        display: none;
+    }
+    @media screen and (max-width: $layout-breakpoints-small) {
+        width: 100%;
+    }
+    @media screen and (min-width: $layout-breakpoints-small) and (max-width: 1460px) {
+        width: 95%;
+        height: 100%
+    }
+}
+
+.work-tags {
+    display: flex;
+    justify-content: flex-start;
+    flex-wrap: wrap;
+    @media screen and (max-width: $layout-breakpoints-small) {
+        justify-content: flex-start;
+        order: 2;
+        border-left: 1px solid $black;
+        border-right: 1px solid $black;
+        padding: 1.8em 0.5em;
+    }
+    @media screen and (min-width: $layout-breakpoints-small) and (max-width: 1460px) {
+        height: 15%;
+        align-items: flex-end;
+    }
+}
+
+.work-tag {
+    border: 1px solid $black;
+    padding: 0.5em 1.5em; 
+    border-radius: 50px;
+    display: flex;
+    justify-content: center;
+    margin: 0.2em;
+    text-transform: uppercase;
+
+    @media screen and (max-width: $layout-breakpoints-small) {
+        margin: 0.3em;
+    }
+}
+
+.work-tag-box {
+    width: auto;
+    @media screen and (max-width: $layout-breakpoints-small) {
+        width: 50%;
+    }
+    @media screen and (min-width: $layout-breakpoints-small) and (max-width: 1460px) {
+        width: 50%;
+    }
+}
+
+//work-lower
+
+.work-lower {
+    height: 13%;
+    border-top: 1px solid $black;
+    border-bottom: 1px solid $black;
+    display: flex;
+    @media screen and (max-width: $layout-breakpoints-small) {
+        height: 13vh;
+    }
+}
+
+.button-work {
+    width: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    &:first-of-type {
+        border-right: 1px solid $black;
+    }
+
+    @media screen and (max-width: $layout-breakpoints-small) {
+        border-left: 1px solid $black;
+        border-right: 1px solid $black;
+        &:first-of-type {
+            border-right: 0;
+        }
+    }
+}
+
+.button-work-nogithub {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    @media screen and (max-width: $layout-breakpoints-small) {
+        border-left: 1px solid $black;
+        border-right: 1px solid $black;
+        &:first-of-type {
+            border-right: 1px solid $black;
+        }
+    }
+}
+
+.button-icon-work {
+    width: 38px;
+    height: 38px;
+    @media screen and (max-width: $layout-breakpoints-small) {
+        width: 28px;
+        height: 28px;
+    }
+
+    @media (max-height: 40rem) {
+        width: 28px;
+        height: 28px;
+    }
+}
